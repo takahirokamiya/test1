@@ -1,0 +1,74 @@
+;チュートリアル用スクリプトファイル
+
+;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む 
+[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+;背景の新規定義
+[bg_new storage = "kumo"]
+
+;背景の表示
+[bg_show]
+
+[wait time=2]
+
+問答無用に夏なのだった[p]
+
+思わず目を細める強い日差し[p]
+
+まだ誰もいない。[l]一番乗りだな。[p]
+なんだか落ち着かないけど[r]
+おとなしく座って待ってよう。[p]
+
+;背景移動のスクリプト
+ガタガタ[p]
+気のせいだったか[p]
+廊下で物音がする[p]
+誰か来たのかな[p]
+
+[bg_mod storage = "rouka" time = 0.5]
+
+誰もいない。。。[p]
+気のせいだったか[p]
+教室に戻ろう[p]
+
+[bg_mod storage = "room" time = 2]
+
+;キャラクターの宣言
+[chara_new name=sizune storage = sizune01 scale = "2" y = -2 jname = 静音　jcolor = " #249390"]
+
+;キャラクターの表示
+[show name = sizune]
+
+#俺
+ゆうこさんおはよう。[p]
+
+#静音
+あら、はやいのね？。おはよう。[p]
+
+#俺
+今日はいい天気だね。[p]
+
+#静音
+そうね。でも天気予報では昼から雨らしいわよ[p]
+
+#きょうすけ
+猫かわいいなぁ（＾ｑ＾）[p]
+
+[chara_new name=kmr storage = kmr scale = "2" y = -2  jname = kmr　jcolor = " #249390"]
+
+[show name = kmr]
+
+#静音
+そうね。でも天気予報では昼から雨らしいわよ[p]
+
+#きょうすけ
+あああああああああああああああああああ[p]
